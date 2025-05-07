@@ -27,7 +27,7 @@ fn main() -> Result<(), Error> {
         .replace("/", "_")
         .replace(".", "_")
         .replace("\\", "_");
-    write!(o_file, "\n\npub const {}: [u8; {}] = [", var_name, i_data.len())?;
+    write!(o_file, "pub const {}: [u8; {}] = [", var_name, i_data.len())?;
     const WIDTH: usize = 10usize;
     for i in 0..i_data.len() {
         if i % WIDTH == 0 { 
